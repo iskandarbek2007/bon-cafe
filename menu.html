@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Меню Bon! Cafe | Завтраки, выпечка, кофе и десерты</title>
+    <meta
+      name="description"
+      content="Отдельная страница меню Bon!: завтраки, французская выпечка, кофе, десерты, салаты и горячие блюда."
+    />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="menu-page">
+    <header class="site-header is-scrolled" data-elevate>
+      <a class="brand" href="index.html" aria-label="Bon! Cafe">
+        <span class="brand-mark">Bon!</span>
+        <span class="brand-sub">Boulangerie & Patisserie</span>
+      </a>
+      <nav class="main-nav" aria-label="Главная навигация">
+        <a href="index.html">Главная</a>
+        <a href="menu.html">Меню</a>
+        <a href="index.html#mood">Атмосфера</a>
+        <a href="index.html#branches">Филиалы</a>
+      </nav>
+      <a class="header-action" href="index.html#contacts">Контакты</a>
+    </header>
+
+    <main>
+      <section class="menu-hero section-dark">
+        <div class="menu-hero-copy">
+          <p class="eyebrow">Carte Bon!</p>
+          <h1>Меню</h1>
+          <p>
+            Завтраки, хрустящая выпечка, кофе, французские десерты и горячие блюда
+            для спокойного дня в ритме Bon!.
+          </p>
+        </div>
+        <figure class="menu-hero-photo">
+          <img
+            src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=82"
+            alt="Кофе и свежая выпечка на столе"
+          />
+        </figure>
+      </section>
+
+      <section class="menu-catalog section-light">
+        <div class="menu-catalog-head">
+          <div>
+            <p class="eyebrow">Choisir</p>
+            <h2>Выберите категорию</h2>
+          </div>
+          <div class="menu-tabs" role="tablist" aria-label="Категории меню">
+            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-menu="breakfast">
+              Завтраки
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="pastry">
+              Выпечка
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="coffee">
+              Кофе
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="dessert">
+              Десерты
+            </button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="dinner">
+              Обед и вечер
+            </button>
+          </div>
+        </div>
+
+        <div class="menu-board">
+          <aside class="menu-board-note">
+            <span>Bon! recommends</span>
+            <h3>Le Classique</h3>
+            <p>Круассан с сыром, салат на выбор и большой кофе. Хороший сет для витрины дня.</p>
+          </aside>
+          <div class="menu-list menu-list-expanded" data-menu-panel></div>
+        </div>
+      </section>
+
+      <section class="signature section-warm">
+        <div class="section-head">
+          <p class="eyebrow">Signatures</p>
+          <h2>То, что стоит вынести на первый экран меню.</h2>
+        </div>
+        <div class="signature-grid">
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=900&q=82"
+              alt="Круассаны"
+            />
+            <h3>Круассаны</h3>
+            <p>Классический, сырный, шоколадный и с сезонными начинками.</p>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=900&q=82"
+              alt="Десерт с ягодами"
+            />
+            <h3>Десерты</h3>
+            <p>Тарты, макарон, шоколад и позиции из собственной кондитерской.</p>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=82"
+              alt="Кофе"
+            />
+            <h3>Кофе</h3>
+            <p>Эспрессо, американо, капучино, раф и холодные напитки для террасы.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <strong>Bon!</strong>
+        <span>Boulangerie · Patisserie · Cafe</span>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="index.html#branches">Филиалы</a>
+        <a href="index.html#contacts">Контакты</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

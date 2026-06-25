@@ -20,7 +20,7 @@
       <nav class="main-nav" aria-label="Главная навигация">
         <a href="index.html">Главная</a>
         <a href="menu.html">Меню</a>
-        <a href="index.html#mood">Атмосфера</a>
+        <a href="#popular">Популярное</a>
         <a href="index.html#branches">Филиалы</a>
       </nav>
       <a class="header-action" href="index.html#contacts">Контакты</a>
@@ -35,6 +35,10 @@
             Завтраки, хрустящая выпечка, кофе, французские десерты и горячие блюда
             для спокойного дня в ритме Bon!.
           </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#catalog">Выбрать категорию</a>
+            <a class="button button-ghost" href="index.html#delivery">Доставка</a>
+          </div>
         </div>
         <figure class="menu-hero-photo">
           <img
@@ -44,7 +48,41 @@
         </figure>
       </section>
 
-      <section class="menu-catalog section-light">
+      <section id="popular" class="popular-menu section-warm">
+        <div class="section-head">
+          <p class="eyebrow">Best sellers</p>
+          <h2>Популярное сегодня</h2>
+          <p>Любимые позиции гостей для завтрака, кофе-паузы и десерта с собой.</p>
+        </div>
+        <div class="popular-grid">
+          <article>
+            <span>Breakfast</span>
+            <strong>Le Petit</strong>
+            <p>Сэндвич-круассан с курицей и большой капучино.</p>
+            <b>50 000 сум</b>
+          </article>
+          <article>
+            <span>Pastry</span>
+            <strong>Pain au chocolat</strong>
+            <p>Слойка с шоколадом собственного производства.</p>
+            <b>28 000 сум</b>
+          </article>
+          <article>
+            <span>Coffee</span>
+            <strong>Grand cappuccino</strong>
+            <p>Мягкий кофейный баланс и плотная молочная текстура.</p>
+            <b>32 000 сум</b>
+          </article>
+          <article>
+            <span>Dessert</span>
+            <strong>Macaron box</strong>
+            <p>Подарочный набор макарон с сезонными вкусами.</p>
+            <b>68 000 сум</b>
+          </article>
+        </div>
+      </section>
+
+      <section id="catalog" class="menu-catalog section-light">
         <div class="menu-catalog-head">
           <div>
             <p class="eyebrow">Choisir</p>
@@ -108,6 +146,30 @@
             />
             <h3>Кофе</h3>
             <p>Эспрессо, американо, капучино, раф и холодные напитки для террасы.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="menu-order section-dark">
+        <div>
+          <p class="eyebrow">Commande</p>
+          <h2>Закажите так, как удобно.</h2>
+        </div>
+        <div class="order-steps">
+          <article>
+            <span>01</span>
+            <h3>Выберите блюда</h3>
+            <p>Откройте нужную категорию и найдите любимую позицию.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Выберите филиал</h3>
+            <p>Самовывоз, доставка или заказ к столу в зале.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Свяжитесь с Bon!</h3>
+            <p>Позвоните или напишите, чтобы уточнить заказ и детали доставки.</p>
           </article>
         </div>
       </section>

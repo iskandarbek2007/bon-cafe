@@ -239,13 +239,65 @@ a {
   font-size: 14px;
 }
 
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--line);
+}
+
+.quick-actions a {
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+  color: var(--espresso);
+  text-decoration: none;
+  background: var(--linen);
+}
+
+.quick-actions span,
+.season-grid span,
+.delivery-card span,
+.popular-grid span,
+.order-steps span {
+  color: var(--bordeaux);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.quick-actions strong {
+  margin-top: auto;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 27px;
+}
+
+.quick-actions p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
 section:not(.hero) {
   padding: clamp(70px, 8vw, 120px) clamp(20px, 6vw, 90px);
 }
 
+.quick-actions.section-light {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .intro-grid,
+.season,
 .split,
-.contacts {
+.contacts,
+.loyalty,
+.menu-order {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1fr);
   gap: clamp(32px, 7vw, 110px);
@@ -307,6 +359,48 @@ p {
   max-width: 230px;
   margin-top: 12px;
   color: var(--muted);
+}
+
+.season {
+  align-items: center;
+}
+
+.season-copy p {
+  max-width: 620px;
+  color: rgba(255, 250, 242, 0.72);
+  font-size: 17px;
+}
+
+.season-copy .button {
+  margin-top: 18px;
+}
+
+.season-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.season-grid article {
+  padding: 26px;
+  border: 1px solid rgba(255, 250, 242, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 250, 242, 0.08);
+}
+
+.season-grid span {
+  color: var(--brass);
+}
+
+.season-grid strong {
+  display: block;
+  margin-top: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+}
+
+.season-grid p {
+  margin-bottom: 0;
+  color: rgba(255, 250, 242, 0.72);
 }
 
 .section-head {
@@ -484,6 +578,10 @@ p {
   font-size: clamp(18px, 2vw, 25px);
 }
 
+.menu-hero .hero-actions {
+  margin-top: 28px;
+}
+
 .menu-hero-photo {
   height: min(62vh, 620px);
   min-height: 420px;
@@ -593,6 +691,67 @@ p {
 .signature-grid p {
   margin-bottom: 24px;
   color: var(--muted);
+}
+
+.popular-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.popular-grid article {
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 14px 42px rgba(45, 27, 20, 0.07);
+}
+
+.popular-grid strong {
+  margin-top: 18px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 28px;
+}
+
+.popular-grid p {
+  color: var(--muted);
+}
+
+.popular-grid b {
+  margin-top: auto;
+  color: var(--bordeaux);
+  font-size: 18px;
+}
+
+.menu-order {
+  align-items: start;
+}
+
+.order-steps {
+  display: grid;
+  gap: 1px;
+  background: rgba(255, 250, 242, 0.16);
+  border: 1px solid rgba(255, 250, 242, 0.16);
+}
+
+.order-steps article {
+  padding: 28px;
+  background: rgba(255, 250, 242, 0.06);
+}
+
+.order-steps span {
+  color: var(--brass);
+}
+
+.order-steps h3 {
+  margin-top: 18px;
+}
+
+.order-steps p {
+  color: rgba(255, 250, 242, 0.72);
 }
 
 .mood-grid {
@@ -717,6 +876,87 @@ p {
   text-decoration: none;
 }
 
+.delivery-layout,
+.review-grid,
+.loyalty-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.delivery-card,
+.review-grid article {
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.delivery-card.accent {
+  color: var(--linen);
+  background: var(--bordeaux);
+}
+
+.delivery-card h3 {
+  margin-top: 18px;
+}
+
+.delivery-card p,
+.review-grid p {
+  color: var(--muted);
+}
+
+.delivery-card.accent p {
+  color: rgba(255, 250, 242, 0.72);
+}
+
+.delivery-card a {
+  margin-top: auto;
+  color: var(--bordeaux);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.delivery-card.accent a,
+.delivery-card.accent span {
+  color: var(--brass);
+}
+
+.loyalty {
+  align-items: start;
+}
+
+.loyalty-list article {
+  min-height: 210px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-content: start;
+  gap: 22px;
+  padding: 26px;
+  border: 1px solid rgba(255, 250, 242, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 250, 242, 0.08);
+}
+
+.loyalty-list span {
+  display: block;
+  max-width: 100%;
+  color: var(--brass);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3.2vw, 52px);
+  line-height: 0.95;
+  overflow-wrap: anywhere;
+}
+
+.loyalty-list p {
+  align-self: end;
+  margin: 0;
+  color: rgba(255, 250, 242, 0.72);
+}
+
 .event-list {
   display: grid;
   gap: 16px;
@@ -734,6 +974,20 @@ p {
 .event-list p {
   margin-bottom: 0;
   color: var(--muted);
+}
+
+.review-grid article {
+  min-height: 230px;
+  justify-content: space-between;
+}
+
+.review-grid p {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.review-grid strong {
+  color: var(--bordeaux);
 }
 
 .contacts {
@@ -828,14 +1082,18 @@ p {
   }
 
   .intro-grid,
+  .season,
   .split,
   .contacts,
+  .loyalty,
+  .menu-order,
   .menu-layout,
   .story {
     grid-template-columns: 1fr;
   }
 
   .metrics,
+  .quick-actions,
   .branch-grid,
   .mood-grid,
   .menu-preview-grid,
@@ -843,7 +1101,11 @@ p {
   .menu-catalog-head,
   .menu-board,
   .menu-list-expanded,
-  .signature-grid {
+  .signature-grid,
+  .popular-grid,
+  .delivery-layout,
+  .review-grid,
+  .loyalty-list {
     grid-template-columns: 1fr;
   }
 
@@ -866,6 +1128,10 @@ p {
     min-height: 38px;
     padding: 0 12px;
     font-size: 13px;
+  }
+
+  .quick-actions a {
+    min-height: 150px;
   }
 
   .hero {

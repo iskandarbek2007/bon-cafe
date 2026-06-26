@@ -30,6 +30,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -40,6 +41,17 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  word-break: break-word;
 }
 
 img {
@@ -477,8 +489,8 @@ section:not(.hero) {
 .loyalty,
 .menu-order {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1fr);
-  gap: clamp(40px, 8vw, 120px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 5vw, 80px);
   align-items: start;
 }
 
@@ -742,8 +754,8 @@ p {
 /* Menu Layout Premium */
 .menu-layout {
   display: grid;
-  grid-template-columns: minmax(300px, 0.86fr) minmax(340px, 1fr);
-  gap: clamp(28px, 4vw, 64px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px, 3vw, 48px);
   align-items: stretch;
 }
 
@@ -826,7 +838,7 @@ p {
 }
 
 .menu-dish-row {
-  grid-template-columns: minmax(200px, 0.38fr) minmax(280px, 1fr) auto;
+  grid-template-columns: 0.4fr 1fr auto;
   align-items: center;
   min-height: 120px;
   border: 1px solid var(--line);
@@ -850,10 +862,10 @@ p {
 .menu-hero {
   min-height: 80vh;
   display: grid;
-  grid-template-columns: minmax(340px, 0.85fr) minmax(340px, 1fr);
-  gap: clamp(32px, 5vw, 80px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 60px);
   align-items: center;
-  padding: 100px clamp(24px, 6vw, 100px) clamp(64px, 8vw, 100px);
+  padding: 100px clamp(16px, 5vw, 80px) clamp(48px, 6vw, 80px);
 }
 
 .menu-hero-copy h1 {
@@ -901,8 +913,8 @@ p {
 /* Menu Catalog Premium */
 .menu-catalog-head {
   display: grid;
-  grid-template-columns: minmax(280px, 0.72fr) minmax(340px, 1fr);
-  gap: 36px;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
   align-items: end;
   margin-bottom: 36px;
 }
@@ -954,8 +966,8 @@ p {
 .menu-category {
   scroll-margin-top: 120px;
   display: grid;
-  grid-template-columns: minmax(240px, 0.34fr) minmax(340px, 1fr);
-  gap: clamp(28px, 4vw, 60px);
+  grid-template-columns: 0.35fr 1fr;
+  gap: clamp(20px, 3vw, 40px);
   padding-top: 32px;
   border-top: 1px solid var(--line);
 }
@@ -987,8 +999,8 @@ p {
 
 .menu-board {
   display: grid;
-  grid-template-columns: minmax(270px, 0.34fr) minmax(340px, 1fr);
-  gap: 24px;
+  grid-template-columns: 0.35fr 1fr;
+  gap: 20px;
   align-items: start;
 }
 
@@ -1239,8 +1251,8 @@ p {
 /* Story Premium */
 .story {
   display: grid;
-  grid-template-columns: minmax(300px, 0.9fr) minmax(340px, 1fr);
-  gap: clamp(40px, 8vw, 110px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 5vw, 80px);
 }
 
 .story-copy p {
@@ -1611,8 +1623,8 @@ p {
 .contact-line,
 .contact-meta {
   display: grid;
-  grid-template-columns: minmax(140px, 0.48fr) minmax(200px, 1fr);
-  gap: 20px;
+  grid-template-columns: 0.48fr 1fr;
+  gap: 16px;
   align-items: center;
   min-height: 84px;
   border-bottom: 1px solid rgba(255, 250, 242, 0.12);
@@ -2008,7 +2020,8 @@ body.is-loading {
 @media (max-width: 1024px) {
   .site-header {
     grid-template-columns: 1fr auto auto;
-    gap: 16px;
+    gap: 12px;
+    padding: 14px 16px;
   }
 
   .main-nav {
@@ -2024,12 +2037,12 @@ body.is-loading {
   }
 
   .hero {
-    min-height: 90vh;
-    padding: 120px clamp(20px, 5vw, 60px) 60px;
+    min-height: 80vh;
+    padding: 100px 20px 50px;
   }
 
   .hero h1 {
-    font-size: clamp(80px, 18vw, 180px);
+    font-size: clamp(72px, 16vw, 160px);
   }
 
   .quick-actions {
@@ -2051,13 +2064,65 @@ body.is-loading {
   }
 
   .mood-item.large {
-    min-height: 500px;
+    min-height: 400px;
+  }
+
+  .intro-grid,
+  .season,
+  .split,
+  .contacts,
+  .loyalty,
+  .menu-order {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .menu-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .menu-catalog-head {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-category {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-board {
+    grid-template-columns: 1fr;
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-dish-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .menu-dish-row p {
+    grid-column: 1 / -1;
+  }
+
+  .contact-line,
+  .contact-meta {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 768px) {
   .site-header {
-    padding: 16px 20px;
+    padding: 12px 16px;
+  }
+
+  .brand-mark {
+    font-size: 28px;
   }
 
   .brand-sub {
@@ -2068,25 +2133,64 @@ body.is-loading {
     display: none;
   }
 
+  .hamburger {
+    width: 40px;
+    height: 40px;
+  }
+
+  .hamburger span {
+    width: 20px;
+  }
+
   .hero {
-    min-height: 85vh;
-    padding: 100px 20px 40px;
+    min-height: 70vh;
+    padding: 80px 16px 40px;
   }
 
   .hero h1 {
-    font-size: clamp(64px, 16vw, 140px);
+    font-size: clamp(56px, 14vw, 120px);
   }
 
   .hero-lede {
-    font-size: 18px;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
+  .hero-actions {
+    margin-top: 24px;
+    gap: 10px;
+  }
+
+  .hero-note {
+    margin-top: 32px;
+    gap: 8px;
+  }
+
+  .hero-note span {
+    padding: 10px 14px;
+    font-size: 12px;
   }
 
   section:not(.hero) {
-    padding: 64px 20px;
+    padding: 48px 16px;
+  }
+
+  .section-head {
+    margin-bottom: 28px;
   }
 
   h2 {
-    font-size: clamp(32px, 6vw, 56px);
+    font-size: clamp(28px, 5vw, 48px);
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  .eyebrow,
+  .section-kicker {
+    font-size: 11px;
+    margin-bottom: 12px;
   }
 
   .quick-actions {
@@ -2094,7 +2198,12 @@ body.is-loading {
   }
 
   .quick-actions a {
-    min-height: 160px;
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  .quick-actions strong {
+    font-size: 22px;
   }
 
   .menu-preview-grid,
@@ -2105,30 +2214,58 @@ body.is-loading {
   .review-grid,
   .loyalty-list {
     grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .menu-preview-card {
+    min-height: 200px;
+  }
+
+  .menu-preview-card span {
+    font-size: 24px;
+    left: 16px;
+    bottom: 16px;
   }
 
   .mood-item,
   .mood-item.large {
-    min-height: 350px;
+    min-height: 250px;
+  }
+
+  .mood-item div {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+
+  .mood-item h3 {
+    font-size: 20px;
   }
 
   .menu-hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding-top: 80px;
+    padding: 80px 16px 40px;
+    gap: 24px;
+  }
+
+  .menu-hero-copy h1 {
+    font-size: clamp(48px, 12vw, 100px);
   }
 
   .menu-hero-photo {
-    min-height: 300px;
-    height: 40vh;
+    min-height: 250px;
+    height: 35vh;
   }
 
   .menu-catalog-head {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .menu-category {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .menu-board {
@@ -2145,6 +2282,12 @@ body.is-loading {
 
   .menu-jump {
     justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .menu-jump a {
+    padding: 0 14px;
+    font-size: 13px;
   }
 
   .menu-list-expanded {
@@ -2156,66 +2299,394 @@ body.is-loading {
     grid-template-columns: 1fr;
   }
 
+  .contact-line strong,
+  .contact-meta strong {
+    font-size: 22px;
+  }
+
   .site-footer {
     flex-direction: column;
-    gap: 24px;
-    padding: 32px 20px;
+    gap: 16px;
+    padding: 24px 16px;
   }
 
   .back-to-top {
-    bottom: 20px;
-    right: 20px;
-    width: 48px;
-    height: 48px;
+    bottom: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
   }
 
   .mobile-menu a {
-    font-size: 28px;
+    font-size: 24px;
+  }
+
+  .delivery-card,
+  .review-grid article,
+  .branch {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .loyalty-list article {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .timeline div,
+  .order-steps article {
+    padding: 20px;
+  }
+
+  .metrics {
+    margin-top: 40px;
+  }
+
+  .metrics div {
+    min-height: 120px;
+    padding: 20px;
+  }
+
+  .metrics strong {
+    font-size: clamp(32px, 5vw, 48px);
+  }
+
+  .signature-grid article {
+    border-radius: 12px;
+  }
+
+  .signature-grid h3,
+  .signature-grid p {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .signature-grid h3 {
+    margin-top: 16px;
+  }
+
+  .signature-grid p {
+    margin-bottom: 20px;
+  }
+
+  .popular-grid article {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .branch {
+    padding: 20px;
+  }
+
+  .season-grid article {
+    padding: 20px;
+  }
+
+  .season-grid strong {
+    font-size: 24px;
+  }
+
+  .loyalty-list span {
+    font-size: clamp(28px, 4vw, 40px);
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .menu-long-list {
+    gap: 32px;
+  }
+
+  .menu-stack {
+    gap: 10px;
+  }
+
+  .menu-dish {
+    padding: 16px;
+  }
+
+  .menu-dish strong {
+    font-size: 17px;
+  }
+
+  .menu-dish span {
+    font-size: 14px;
+  }
+
+  .light {
+    padding: 12px 16px;
+  }
+
+  .intro-copy p,
+  .section-head p,
+  .contacts-copy p,
+  .story-copy p {
+    font-size: 15px;
+  }
+
+  .season-copy p {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 480px) {
-  .hero {
-    min-height: 80vh;
-    padding: 90px 16px 32px;
-  }
-
-  .hero h1 {
-    font-size: clamp(56px, 14vw, 120px);
-  }
-
-  .hero-note {
-    flex-direction: column;
+  .site-header {
+    padding: 10px 12px;
     gap: 8px;
   }
 
-  .hero-note span {
-    text-align: center;
+  .brand-mark {
+    font-size: 24px;
+  }
+
+  .hamburger {
+    width: 36px;
+    height: 36px;
+  }
+
+  .hamburger span {
+    width: 18px;
+    height: 2px;
+  }
+
+  .hero {
+    min-height: 65vh;
+    padding: 70px 12px 30px;
+  }
+
+  .hero h1 {
+    font-size: clamp(48px, 13vw, 100px);
+  }
+
+  .hero-lede {
+    font-size: 14px;
+    margin-top: 16px;
+    line-height: 1.5;
   }
 
   .hero-actions {
+    margin-top: 20px;
     flex-direction: column;
   }
 
   .button {
     width: 100%;
     justify-content: center;
+    min-height: 42px;
+    font-size: 13px;
+  }
+
+  .hero-note {
+    margin-top: 24px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .hero-note span {
+    text-align: center;
+    padding: 8px 12px;
+    font-size: 11px;
   }
 
   section:not(.hero) {
-    padding: 48px 16px;
+    padding: 36px 12px;
+  }
+
+  h2 {
+    font-size: clamp(24px, 5vw, 36px);
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .quick-actions a {
+    min-height: 100px;
+    padding: 16px;
+  }
+
+  .quick-actions strong {
+    font-size: 18px;
+  }
+
+  .quick-actions p {
+    font-size: 13px;
   }
 
   .metrics {
     grid-template-columns: 1fr;
+    margin-top: 32px;
   }
 
-  .menu-dish-row {
-    grid-template-columns: 1fr auto;
+  .metrics div {
+    min-height: 100px;
+    padding: 16px;
   }
 
-  .menu-dish-row p {
-    grid-column: 1 / -1;
+  .metrics strong {
+    font-size: 36px;
+  }
+
+  .metrics span {
+    font-size: 13px;
+    margin-top: 8px;
+  }
+
+  .menu-preview-card {
+    min-height: 160px;
+  }
+
+  .menu-preview-card span {
+    font-size: 20px;
+  }
+
+  .mood-item,
+  .mood-item.large {
+    min-height: 200px;
+  }
+
+  .mood-item h3 {
+    font-size: 18px;
+  }
+
+  .mood-item p {
+    font-size: 14px;
+  }
+
+  .season-grid article {
+    padding: 16px;
+  }
+
+  .season-grid strong {
+    font-size: 20px;
+  }
+
+  .season-grid p {
+    font-size: 14px;
+  }
+
+  .delivery-card,
+  .review-grid article,
+  .branch {
+    padding: 16px;
+  }
+
+  .delivery-card h3,
+  .branch h3 {
+    font-size: 18px;
+    margin-top: 12px;
+  }
+
+  .delivery-card p,
+  .review-grid p,
+  .branch p {
+    font-size: 14px;
+  }
+
+  .review-grid p {
+    font-size: 16px;
+  }
+
+  .loyalty-list article {
+    padding: 16px;
+  }
+
+  .loyalty-list span {
+    font-size: 32px;
+  }
+
+  .loyalty-list p {
+    font-size: 14px;
+  }
+
+  .timeline div,
+  .order-steps article {
+    padding: 16px;
+  }
+
+  .timeline strong {
+    font-size: 20px;
+  }
+
+  .timeline p,
+  .order-steps p {
+    font-size: 14px;
+  }
+
+  .contact-board {
+    padding: 16px;
+  }
+
+  .contact-line,
+  .contact-meta {
+    min-height: 60px;
+  }
+
+  .contact-line strong {
+    font-size: 18px;
+  }
+
+  .contact-meta strong {
+    font-size: 18px;
+  }
+
+  .menu-hero {
+    padding: 70px 12px 30px;
+  }
+
+  .menu-hero-copy h1 {
+    font-size: clamp(40px, 10vw, 80px);
+  }
+
+  .menu-hero-photo {
+    min-height: 200px;
+    height: 30vh;
+  }
+
+  .menu-dish {
+    padding: 12px;
+  }
+
+  .menu-dish strong {
+    font-size: 15px;
+  }
+
+  .menu-dish p {
+    font-size: 13px;
+  }
+
+  .menu-dish span {
+    font-size: 13px;
+  }
+
+  .signature-grid img {
+    aspect-ratio: 1.4;
+  }
+
+  .popular-grid article {
+    padding: 16px;
+  }
+
+  .popular-grid strong {
+    font-size: 22px;
+  }
+
+  .mobile-menu a {
+    font-size: 20px;
+  }
+
+  .back-to-top {
+    bottom: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .back-to-top svg {
+    width: 20px;
+    height: 20px;
   }
 }
 

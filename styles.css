@@ -1170,7 +1170,180 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .site-footer {
+.site-footer {
     display: grid;
+  }
+}
+
+body.is-loading * {
+  transition: none !important;
+}
+
+.site-header {
+  animation: headerDrop 650ms ease both;
+}
+
+.hero-media img {
+  transform: scale(1.06);
+  animation: heroImageIn 1800ms ease forwards;
+  will-change: transform;
+}
+
+.hero-content {
+  animation: riseIn 900ms 180ms ease both;
+}
+
+.hero-note {
+  animation: riseIn 900ms 360ms ease both;
+}
+
+.button,
+.quick-actions a,
+.menu-preview-card,
+.menu-dish,
+.signature-grid article,
+.popular-grid article,
+.branch,
+.delivery-card,
+.review-grid article,
+.loyalty-list article,
+.contact-line,
+.footer-links a {
+  transition:
+    transform 200ms ease,
+    box-shadow 200ms ease,
+    border-color 200ms ease,
+    background 200ms ease,
+    color 200ms ease;
+}
+
+.button:hover,
+.quick-actions a:hover,
+.menu-preview-card:hover,
+.signature-grid article:hover,
+.popular-grid article:hover,
+.branch:hover,
+.delivery-card:hover,
+.review-grid article:hover,
+.loyalty-list article:hover {
+  transform: translateY(-5px);
+}
+
+.button:hover {
+  box-shadow: 0 12px 30px rgba(45, 27, 20, 0.18);
+}
+
+.quick-actions a:hover,
+.menu-dish:hover,
+.signature-grid article:hover,
+.popular-grid article:hover,
+.branch:hover,
+.delivery-card:hover,
+.review-grid article:hover {
+  box-shadow: 0 22px 58px rgba(45, 27, 20, 0.12);
+}
+
+.quick-actions a:hover,
+.menu-dish:hover {
+  background: #fff;
+}
+
+.season-grid article {
+  transition: transform 200ms ease, background 200ms ease;
+}
+
+.season-grid article:hover,
+.contact-line:hover {
+  transform: translateX(6px);
+}
+
+.season-grid article:hover,
+.loyalty-list article:hover {
+  background: rgba(255, 250, 242, 0.12);
+}
+
+.menu-preview-card:hover {
+  box-shadow: 0 30px 84px rgba(45, 27, 20, 0.2);
+}
+
+.menu-dish:hover,
+.branch:hover {
+  border-color: rgba(127, 38, 56, 0.24);
+}
+
+.mood-item img,
+.signature-grid img {
+  transition: transform 320ms ease, filter 320ms ease;
+}
+
+.mood-item:hover img {
+  filter: brightness(0.58);
+  transform: scale(1.04);
+}
+
+.signature-grid article:hover img {
+  filter: brightness(0.9);
+  transform: scale(1.04);
+}
+
+.contact-line:hover,
+.footer-links a:hover {
+  color: var(--brass);
+}
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(34px);
+  transition: opacity 680ms ease, transform 680ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes headerDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroImageIn {
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes riseIn {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
+  }
+
+  [data-animate] {
+    opacity: 1;
+    transform: none;
   }
 }

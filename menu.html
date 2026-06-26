@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Меню Bon! Cafe | Завтраки, выпечка, кофе и десерты</title>
-    <meta
-      name="description"
-      content="Отдельная страница меню Bon!: завтраки, французская выпечка, кофе, десерты, салаты и горячие блюда."
-    />
+    <title>Меню Bon! Café | Завтраки, выпечка, кофе и десерты</title>
+    <meta name="description" content="Полное меню Bon!: завтраки, французская выпечка, кофе, десерты, салаты и горячие блюда." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="menu-page">
+
     <header class="site-header is-scrolled" data-elevate>
-      <a class="brand" href="index.html" aria-label="Bon! Cafe">
+      <a class="brand" href="index.html" aria-label="Bon! Café">
         <span class="brand-mark">Bon!</span>
-        <span class="brand-sub">Boulangerie & Patisserie</span>
+        <span class="brand-sub">Boulangerie &amp; Patisserie</span>
       </a>
-      <nav class="main-nav" aria-label="Главная навигация">
+      <nav class="main-nav" aria-label="Навигация">
         <a href="index.html">Главная</a>
         <a href="menu.html">Меню</a>
         <a href="#popular">Популярное</a>
@@ -26,164 +27,139 @@
     </header>
 
     <main>
+
+      <!-- ─── Menu Hero ──────────────────────────────────────── -->
       <section class="menu-hero section-dark">
         <div class="menu-hero-copy">
-          <p class="eyebrow">Carte Bon!</p>
+          <span class="eyebrow">Carte Bon!</span>
           <h1>Меню</h1>
-          <p>
-            Завтраки, хрустящая выпечка, кофе, французские десерты и горячие блюда
-            для спокойного дня в ритме Bon!.
-          </p>
+          <p>Завтраки, хрустящая выпечка, кофе, французские десерты и горячие блюда — для спокойного дня в ритме Bon!</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#catalog">Выбрать категорию</a>
             <a class="button button-ghost" href="index.html#delivery">Доставка</a>
           </div>
         </div>
         <figure class="menu-hero-photo">
-          <img
-            src="menu-hero.jpg"
-            alt="Кофе и свежая выпечка на столе"
-          />
+          <img src="menu-hero.jpg" alt="Кофе и свежая выпечка на столе" />
         </figure>
       </section>
 
+      <!-- ─── Popular ────────────────────────────────────────── -->
       <section id="popular" class="popular-menu section-warm">
         <div class="section-head">
-          <p class="eyebrow">Best sellers</p>
+          <span class="eyebrow">Best sellers</span>
           <h2>Популярное сегодня</h2>
-          <p>Любимые позиции гостей для завтрака, кофе-паузы и десерта с собой.</p>
+          <p>Любимые позиции гостей для завтрака, кофе-паузы и десерта.</p>
         </div>
         <div class="popular-grid">
           <article>
-            <span>Breakfast</span>
+            <div class="p-tag">Завтрак</div>
             <strong>Le Petit</strong>
             <p>Сэндвич-круассан с курицей и большой капучино.</p>
-            <b>50 000 сум</b>
+            <div class="price">50 000 сум</div>
           </article>
           <article>
-            <span>Pastry</span>
+            <div class="p-tag">Выпечка</div>
             <strong>Pain au chocolat</strong>
             <p>Слойка с шоколадом собственного производства.</p>
-            <b>28 000 сум</b>
+            <div class="price">28 000 сум</div>
           </article>
           <article>
-            <span>Coffee</span>
+            <div class="p-tag">Кофе</div>
             <strong>Grand cappuccino</strong>
             <p>Мягкий кофейный баланс и плотная молочная текстура.</p>
-            <b>32 000 сум</b>
+            <div class="price">32 000 сум</div>
           </article>
           <article>
-            <span>Dessert</span>
+            <div class="p-tag">Десерт</div>
             <strong>Macaron box</strong>
             <p>Подарочный набор макарон с сезонными вкусами.</p>
-            <b>68 000 сум</b>
+            <div class="price">68 000 сум</div>
           </article>
         </div>
       </section>
 
+      <!-- ─── Full Menu ──────────────────────────────────────── -->
       <section id="catalog" class="menu-catalog section-light">
         <div class="menu-catalog-head">
           <div>
-            <p class="eyebrow">Choisir</p>
-            <h2>Выберите категорию</h2>
+            <span class="eyebrow">La carte complète</span>
+            <h2>Полное меню</h2>
           </div>
-          <div class="menu-tabs" role="tablist" aria-label="Категории меню">
-            <button class="tab is-active" type="button" role="tab" aria-selected="true" data-menu="breakfast">
-              Завтраки
-            </button>
-            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="pastry">
-              Выпечка
-            </button>
-            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="coffee">
-              Кофе
-            </button>
-            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="dessert">
-              Десерты
-            </button>
-            <button class="tab" type="button" role="tab" aria-selected="false" data-menu="dinner">
-              Обед и вечер
-            </button>
-          </div>
+          <nav class="menu-jump" aria-label="Категории меню">
+            <a href="#breakfast">Завтраки</a>
+            <a href="#pastry">Выпечка</a>
+            <a href="#coffee">Кофе</a>
+            <a href="#dessert">Десерты</a>
+            <a href="#dinner">Обед и вечер</a>
+          </nav>
         </div>
-
-        <div class="menu-board">
-          <aside class="menu-board-note">
-            <span>Bon! recommends</span>
-            <h3>Le Classique</h3>
-            <p>Круассан с сыром, салат на выбор и большой кофе. Хороший сет для витрины дня.</p>
-          </aside>
-          <div class="menu-list menu-list-expanded" data-menu-panel></div>
-        </div>
+        <div class="menu-long-list" data-full-menu></div>
       </section>
 
+      <!-- ─── Signatures ─────────────────────────────────────── -->
       <section class="signature section-warm">
         <div class="section-head">
-          <p class="eyebrow">Signatures</p>
-          <h2>То, что стоит вынести на первый экран меню.</h2>
+          <span class="eyebrow">Signatures</span>
+          <h2>То, что стоит попробовать прежде всего.</h2>
         </div>
         <div class="signature-grid">
           <article>
-            <img
-              src="sig-croissant.jpg"
-              alt="Круассаны"
-            />
+            <img src="sig-croissant.jpg" alt="Круассаны" />
             <h3>Круассаны</h3>
-            <p>Классический, сырный, шоколадный и с сезонными начинками.</p>
+            <p>Классический, сырный, шоколадный и с сезонными начинками — из собственной пекарни.</p>
           </article>
           <article>
-            <img
-              src="sig-dessert.jpg"
-              alt="Десерт с ягодами"
-            />
+            <img src="sig-dessert.jpg" alt="Десерты" />
             <h3>Десерты</h3>
-            <p>Тарты, макарон, шоколад и позиции из собственной кондитерской.</p>
+            <p>Тарты, макарон, шоколад и позиции из собственной кондитерской — новинки каждый сезон.</p>
           </article>
           <article>
-            <img
-              src="sig-coffee.jpg"
-              alt="Кофе"
-            />
+            <img src="sig-coffee.jpg" alt="Кофе" />
             <h3>Кофе</h3>
-            <p>Эспрессо, американо, капучино, раф и холодные напитки для террасы.</p>
+            <p>Эспрессо, американо, капучино, раф и холодные напитки для летней террасы.</p>
           </article>
         </div>
       </section>
 
+      <!-- ─── Order Steps ────────────────────────────────────── -->
       <section class="menu-order section-dark">
         <div>
-          <p class="eyebrow">Commande</p>
+          <span class="eyebrow">Commande</span>
           <h2>Закажите так, как удобно.</h2>
         </div>
         <div class="order-steps">
           <article>
-            <span>01</span>
+            <span class="step-n">01</span>
             <h3>Выберите блюда</h3>
-            <p>Откройте нужную категорию и найдите любимую позицию.</p>
+            <p>Откройте нужную категорию и найдите любимую позицию по описанию и цене.</p>
           </article>
           <article>
-            <span>02</span>
-            <h3>Выберите филиал</h3>
-            <p>Самовывоз, доставка или заказ к столу в зале.</p>
+            <span class="step-n">02</span>
+            <h3>Выберите формат</h3>
+            <p>Самовывоз, доставка или заказ к столу — уточним при звонке или в Telegram.</p>
           </article>
           <article>
-            <span>03</span>
+            <span class="step-n">03</span>
             <h3>Свяжитесь с Bon!</h3>
-            <p>Позвоните или напишите, чтобы уточнить заказ и детали доставки.</p>
+            <p>Позвоните или напишите — ответим быстро и уточним детали заказа.</p>
           </article>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div>
-        <strong>Bon!</strong>
-        <span>Boulangerie · Patisserie · Cafe</span>
+        <div class="footer-brand">Bon!</div>
+        <div class="footer-sub">Boulangerie · Patisserie · Café</div>
       </div>
-      <div class="footer-links">
+      <nav class="footer-links">
         <a href="index.html">Главная</a>
         <a href="index.html#branches">Филиалы</a>
         <a href="index.html#contacts">Контакты</a>
-      </div>
+      </nav>
+      <span class="footer-copy">© 2024 Bon! Café, Ташкент</span>
     </footer>
 
     <script src="script.js"></script>

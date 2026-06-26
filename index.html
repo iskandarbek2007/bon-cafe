@@ -3,20 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bon! Cafe | Французская кофейня-кондитерская в Ташкенте</title>
-    <meta
-      name="description"
-      content="Bon! Cafe в Ташкенте: французская выпечка, завтраки, кофе, десерты, филиалы, доставка и уютные залы для встреч."
-    />
+    <title>Bon! Café | Французская кофейня-кондитерская в Ташкенте</title>
+    <meta name="description" content="Bon! Café в Ташкенте: французская выпечка, завтраки, кофе, десерты, филиалы, доставка и уютные залы." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
     <header class="site-header" data-elevate>
-      <a class="brand" href="#top" aria-label="Bon! Cafe">
+      <a class="brand" href="#top" aria-label="Bon! Café">
         <span class="brand-mark">Bon!</span>
-        <span class="brand-sub">Boulangerie & Patisserie</span>
+        <span class="brand-sub">Boulangerie &amp; Patisserie</span>
       </a>
-      <nav class="main-nav" aria-label="Главная навигация">
+      <nav class="main-nav" aria-label="Навигация">
         <a href="menu.html">Меню</a>
         <a href="#mood">Атмосфера</a>
         <a href="#branches">Филиалы</a>
@@ -26,437 +27,383 @@
     </header>
 
     <main id="top">
+
+      <!-- ─── Hero ──────────────────────────────────────────── -->
       <section class="hero section-dark">
         <div class="hero-media" aria-hidden="true">
-          <img
-            src="hero-main.jpg"
-            alt=""
-          />
+          <img src="hero-main.jpg" alt="" />
         </div>
         <div class="hero-content">
-          <p class="eyebrow">Tachkent avec amour</p>
+          <div class="hero-badge" aria-label="Открыто каждый день">Ouvert chaque jour · Ташкент</div>
           <h1>Bon!</h1>
-          <p class="hero-lede">
-            Французская кофейня-кондитерская в Ташкенте: свежая выпечка,
-            завтраки, кофе, десерты и тёплые залы для тех, кто любит красивые
-            городские паузы.
-          </p>
+          <p class="hero-sub">Французская кофейня-кондитерская в Ташкенте — свежая выпечка, завтраки, авторские десерты и тёплые залы для тех, кто ценит красивые городские паузы.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="menu.html">Смотреть меню</a>
-            <a class="button button-ghost" href="#delivery"
-              >Заказать доставку</a
-            >
+            <a class="button button-ghost" href="#delivery">Заказать доставку</a>
           </div>
         </div>
-        <aside class="hero-note" aria-label="Короткая информация">
-          <span>07:30-23:00</span>
+        <aside class="hero-note" aria-label="Информация">
+          <span>07:30 — 23:00</span>
           <span>Завтраки каждый день</span>
           <span>Филиалы по Ташкенту</span>
+          <span>Собственное производство</span>
         </aside>
       </section>
 
-      <section
-        class="quick-actions section-light"
-        aria-label="Быстрые действия"
-      >
+      <!-- ─── Quick Actions ─────────────────────────────────── -->
+      <nav class="quick-actions" aria-label="Быстрые действия">
         <a href="menu.html">
-          <span>01</span>
+          <span class="qa-num">01</span>
           <strong>Открыть меню</strong>
           <p>Завтраки, выпечка, кофе, десерты и горячая кухня.</p>
         </a>
         <a href="#branches">
-          <span>02</span>
+          <span class="qa-num">02</span>
           <strong>Найти филиал</strong>
-          <p>Выберите ближайшую точку для встречи, завтрака или take-away.</p>
+          <p>Выберите ближайшую точку для встречи или take-away.</p>
         </a>
         <a href="#delivery">
-          <span>03</span>
+          <span class="qa-num">03</span>
           <strong>Доставка</strong>
-          <p>Закажите кофе, завтраки и десерты домой или в офис.</p>
+          <p>Кофе, завтраки и десерты домой или в офис.</p>
         </a>
         <a href="#contacts">
-          <span>04</span>
+          <span class="qa-num">04</span>
           <strong>Связаться</strong>
-          <p>Номера, Instagram и график работы для гостей.</p>
+          <p>Номера, Instagram и график работы.</p>
         </a>
-      </section>
+      </nav>
 
+      <!-- ─── Intro ──────────────────────────────────────────── -->
       <section class="intro section-light">
-        <div class="section-kicker">Depuis le matin</div>
+        <span class="kicker">Depuis le matin</span>
         <div class="intro-grid">
           <div>
-            <h2>
-              Французская кофейня для завтраков, встреч и красивых городских пауз.
-            </h2>
+            <h2>Французская кофейня для завтраков, встреч и красивых городских пауз.</h2>
           </div>
-          <div class="intro-copy">
-            <p>
-              Bon! вырос из маленькой кондитерской в сеть кофеен с собственной
-              культурой: французские десерты, горячие блюда, салаты, напитки,
-              натуральный шоколад и мороженое собственного производства.
-            </p>
+          <div>
+            <p class="intro-lede">Bon! вырос из маленькой кондитерской в сеть кофеен с собственной культурой: французские десерты, горячие блюда, натуральный шоколад и мороженое собственного производства.</p>
           </div>
         </div>
-        <div class="metrics" aria-label="Преимущества">
+        <div class="metrics" aria-label="Показатели">
           <div>
-            <strong>26-й</strong>
-            <span>крупный филиал открыт на Глинки</span>
+            <strong>26</strong>
+            <span>Крупный флагманский филиал открыт на Глинки</span>
           </div>
           <div>
-            <strong>08:00</strong>
-            <span>классическое время ранних завтраков</span>
+            <strong>07:30</strong>
+            <span>Ранние завтраки — каждый день без выходных</span>
           </div>
           <div>
-            <strong>Le Bon</strong>
-            <span>круассаны, кофе, десерты и горячая кухня</span>
+            <strong>Le&nbsp;Bon</strong>
+            <span>Круассаны, кофе, десерты и горячая кухня собственного производства</span>
           </div>
         </div>
       </section>
 
+      <!-- ─── Season ─────────────────────────────────────────── -->
       <section class="season section-dark">
         <div class="season-copy">
-          <p class="eyebrow">La saison</p>
+          <span class="eyebrow">La saison</span>
           <h2>Сезонные вкусы, которые хочется попробовать сегодня.</h2>
-
-          <a class="button button-primary" href="menu.html#dessert"
-            >Смотреть новинки</a
-          >
+          <p>Ограниченные позиции в меню — натуральные ингредиенты, авторские рецепты, обновление каждый сезон.</p>
+          <a class="button button-primary" href="menu.html#dessert">Смотреть новинки</a>
         </div>
         <div class="season-grid">
           <article>
-            <span>New</span>
-            <strong>Berry eclair</strong>
-            <p>Эклер с ягодной глазурью и ванильным кремом.</p>
+            <span class="tag">New</span>
+            <strong>Berry Eclair</strong>
+            <p>Эклер с ягодной глазурью и ванильным кремом собственного производства.</p>
           </article>
           <article>
-            <span>Summer</span>
-            <strong>Espresso tonic</strong>
-            <p>Холодный кофейный напиток для жаркого Ташкента.</p>
+            <span class="tag">Summer</span>
+            <strong>Espresso Tonic</strong>
+            <p>Холодный кофейный напиток для жаркого Ташкента — лёгко, свежо, бодро.</p>
           </article>
           <article>
-            <span>Gift</span>
-            <strong>Macaron box</strong>
-            <p>Набор макарон для визита, офиса или маленького праздника.</p>
+            <span class="tag">Gift</span>
+            <strong>Macaron Box</strong>
+            <p>Набор макарон для офиса, визита или маленького французского праздника.</p>
           </article>
         </div>
       </section>
 
+      <!-- ─── Menu Preview ───────────────────────────────────── -->
       <section id="menu" class="menu-preview section-warm">
         <div class="section-head">
-          <p class="eyebrow">Menu du jour</p>
-          <h2>Завтраки, выпечка и кофе в отдельном меню.</h2>
+          <span class="eyebrow">Menu du jour</span>
+          <h2>Завтраки, выпечка и кофе.</h2>
+          <p>Отдельная страница с полным меню: все категории, цены и описания.</p>
         </div>
         <div class="menu-preview-grid">
           <a class="menu-preview-card" href="menu.html#breakfast">
-            <img
-              src="menu-breakfast.jpg"
-              alt="Завтрак с кофе и выпечкой"
-            />
-            <span>Завтраки</span>
+            <img src="menu-breakfast.jpg" alt="Завтрак с кофе и выпечкой" />
+            <div class="menu-preview-card-body">
+              <div class="card-kicker">Dès 07:30</div>
+              <span>Завтраки</span>
+            </div>
           </a>
           <a class="menu-preview-card" href="menu.html#pastry">
-            <img
-              src="menu-pastry.jpg"
-              alt="Свежая выпечка"
-            />
-            <span>Выпечка</span>
+            <img src="menu-pastry.jpg" alt="Свежая выпечка" />
+            <div class="menu-preview-card-body">
+              <div class="card-kicker">Свежая каждый день</div>
+              <span>Выпечка</span>
+            </div>
           </a>
           <a class="menu-preview-card" href="menu.html#coffee">
-            <img
-              src="menu-coffee.jpg"
-              alt="Чашка кофе"
-            />
-            <span>Кофе</span>
+            <img src="menu-coffee.jpg" alt="Чашка кофе" />
+            <div class="menu-preview-card-body">
+              <div class="card-kicker">Espresso bar</div>
+              <span>Кофе</span>
+            </div>
           </a>
         </div>
         <a class="button button-dark" href="menu.html">Открыть полное меню</a>
       </section>
 
+      <!-- ─── Mood ───────────────────────────────────────────── -->
       <section id="mood" class="mood section-light">
         <div class="section-head narrow">
-          <p class="eyebrow">L'ambiance</p>
+          <span class="eyebrow">L'ambiance</span>
           <h2>Парижская кондитерская, адаптированная к Ташкенту.</h2>
         </div>
         <div class="mood-grid">
           <article class="mood-item large">
-            <img
-              src="mood-interior.jpg"
-              alt="Уютная кофейня с деревянными столами"
-            />
-            <div>
+            <img src="mood-interior.jpg" alt="Интерьер кофейни с деревянными столами" />
+            <div class="mood-caption">
               <h3>Тёплый интерьер</h3>
-              <p>
-                Дерево, бра, мягкая посадка, постеры и зеркала вместо холодной
-                сетевой стерильности.
-              </p>
+              <p>Дерево, бра, мягкая посадка, постеры и зеркала — атмосфера без сетевой стерильности.</p>
             </div>
           </article>
           <article class="mood-item">
-            <img
-              src="mood-display.jpg"
-              alt="Свежая выпечка"
-            />
-            <div>
+            <img src="mood-display.jpg" alt="Витрина с выпечкой и десертами" />
+            <div class="mood-caption">
               <h3>Витрина дня</h3>
-              <p>
-                Свежая выпечка и десерты как главный визуальный крючок первого
-                экрана меню.
-              </p>
+              <p>Свежая выпечка и сезонные десерты каждое утро.</p>
             </div>
           </article>
           <article class="mood-item">
-            <img
-              src="mood-coffee.jpg"
-              alt="Чашка кофе"
-            />
-            <div>
+            <img src="mood-coffee.jpg" alt="Чашка кофе" />
+            <div class="mood-caption">
               <h3>Кофейный ритуал</h3>
-              <p>
-                Эспрессо, американо и капучино как привычная городская пауза
-                между делами.
-              </p>
+              <p>Эспрессо, американо, капучино — привычная городская пауза между делами.</p>
             </div>
           </article>
         </div>
       </section>
 
+      <!-- ─── Story ──────────────────────────────────────────── -->
       <section class="story section-dark">
         <div class="story-copy">
-          <p class="eyebrow">Notre histoire</p>
-          <h2>
-            От маленькой кондитерской до одного из символов кофейной культуры.
-          </h2>
-          <p>
-            История Bon! строится вокруг идеи доступной французской культуры:
-            уютные залы, десерты от кондитеров, продуманные завтраки и
-            собственное производство.
-          </p>
+          <span class="eyebrow">Notre histoire</span>
+          <h2>От маленькой кондитерской до символа кофейной культуры.</h2>
+          <p>История Bon! строится вокруг идеи доступной французской культуры: уютные залы, десерты от кондитеров, продуманные завтраки и собственное производство.</p>
         </div>
         <div class="timeline" aria-label="История бренда">
           <div>
-            <span>01</span><strong>Кондитерская</strong>
-            <p>Первые эксперименты с рынком и вкусом.</p>
+            <span class="timeline-num">01</span>
+            <strong>Кондитерская</strong>
+            <p>Первые эксперименты с рынком и французским вкусом в Ташкенте.</p>
           </div>
           <div>
-            <span>02</span><strong>Chekhov Street</strong>
-            <p>Первый формат кофейни, вдохновлённый Европой.</p>
+            <span class="timeline-num">02</span>
+            <strong>Chekhov Street</strong>
+            <p>Первый формат кофейни, вдохновлённый европейской культурой завтрака.</p>
           </div>
           <div>
-            <span>03</span><strong>Сеть</strong>
-            <p>Филиалы, производство, узнаваемый городской стиль.</p>
+            <span class="timeline-num">03</span>
+            <strong>Сеть &amp; Производство</strong>
+            <p>Филиалы, собственная кондитерская, узнаваемый городской стиль.</p>
           </div>
         </div>
       </section>
 
+      <!-- ─── Delivery ───────────────────────────────────────── -->
       <section id="delivery" class="delivery section-warm">
         <div class="section-head">
-          <p class="eyebrow">Livraison</p>
+          <span class="eyebrow">Livraison</span>
           <h2>Доставка и take-away для Ташкента.</h2>
+          <p>Закажите любимые позиции — оператор свяжется и уточнит детали.</p>
         </div>
         <div class="delivery-layout">
           <div class="delivery-card">
-            <span>01</span>
+            <span class="d-num">01</span>
             <h3>Заказ в Telegram</h3>
-            <p>Оформите заказ через чат и уточните детали у оператора.</p>
+            <p>Оформите заказ через чат и уточните детали у оператора. Быстро и удобно.</p>
             <a href="#contacts">Написать</a>
           </div>
           <div class="delivery-card">
-            <span>02</span>
+            <span class="d-num">02</span>
             <h3>Самовывоз</h3>
-            <p>Гость выбирает филиал, время и забирает кофе без ожидания.</p>
+            <p>Выберите филиал, укажите время — и заберите кофе без ожидания.</p>
             <a href="#branches">Выбрать филиал</a>
           </div>
           <div class="delivery-card accent">
-            <span>03</span>
+            <span class="d-num">03</span>
             <h3>Подарочные боксы</h3>
-            <p>Макарон, десерты, шоколад и выпечка для офиса или праздника.</p>
+            <p>Макарон, десерты, шоколад и выпечка — для офиса, праздника или дорогого человека.</p>
             <a href="menu.html#dessert">Смотреть десерты</a>
           </div>
         </div>
       </section>
 
+      <!-- ─── Branches ───────────────────────────────────────── -->
       <section id="branches" class="branches section-light">
         <div class="section-head">
-          <p class="eyebrow">Les adresses</p>
-          <h2>
-            Филиалы как отдельные сценарии: завтрак, встреча, семейный обед.
-          </h2>
+          <span class="eyebrow">Les adresses</span>
+          <h2>Филиалы как отдельные сценарии.</h2>
+          <p>Завтрак, деловая встреча, семейный обед или тихий кофе — для каждого есть свой зал.</p>
         </div>
 
-        <div class="branch-controls" aria-label="Фильтр филиалов">
-          <button class="chip is-active" type="button" data-filter="all">
-            Все
-          </button>
-          <button class="chip" type="button" data-filter="flagship">
-            Флагман
-          </button>
-          <button class="chip" type="button" data-filter="breakfast">
-            Завтрак
-          </button>
-          <button class="chip" type="button" data-filter="terrace">
-            Терраса
-          </button>
+        <div class="branch-controls" aria-label="Фильтр">
+          <button class="chip is-active" type="button" data-filter="all">Все</button>
+          <button class="chip" type="button" data-filter="flagship">Флагман</button>
+          <button class="chip" type="button" data-filter="breakfast">Завтрак</button>
+          <button class="chip" type="button" data-filter="terrace">Терраса</button>
         </div>
 
         <div class="branch-grid" data-branches>
           <article class="branch" data-type="flagship breakfast">
-            <span>Флагман</span>
+            <span class="branch-tag">Флагман</span>
             <h3>Глинки, 19</h3>
-            <p>
-              Двухэтажный филиал с пастельными оттенками, витринами выпечки и
-              зонами для встреч.
-            </p>
+            <p>Двухэтажный зал с витринами выпечки, пастельными оттенками и отдельными зонами для встреч.</p>
             <a href="#contacts">Позвонить</a>
           </article>
           <article class="branch" data-type="breakfast">
-            <span>Классика</span>
+            <span class="branch-tag">Классика</span>
             <h3>Шота Руставели, 63</h3>
-            <p>
-              Ранний кофе, завтраки и знакомое настроение европейской кофейни в
-              центре города.
-            </p>
-            <a href="#contacts">Контакты филиала</a>
+            <p>Ранний кофе, завтраки и атмосфера европейской кофейни в центре города.</p>
+            <a href="#contacts">Контакты</a>
           </article>
           <article class="branch" data-type="terrace breakfast">
-            <span>Терраса</span>
+            <span class="branch-tag">Терраса</span>
             <h3>Chekhov Street</h3>
-            <p>
-              Историческая точка бренда с камерной атмосферой и спокойным
-              ритмом для долгих встреч.
-            </p>
-            <a href="#contacts">Открыть маршрут</a>
+            <p>Историческая точка бренда — камерная атмосфера для долгих разговоров и неспешного кофе.</p>
+            <a href="#contacts">Маршрут</a>
           </article>
         </div>
       </section>
 
+      <!-- ─── Loyalty ────────────────────────────────────────── -->
       <section class="loyalty section-dark">
         <div>
-          <p class="eyebrow">Bon! club</p>
+          <span class="eyebrow">Bon! Club</span>
           <h2>Лояльность, которая возвращает гостей.</h2>
         </div>
         <div class="loyalty-list">
           <article>
             <span>5%</span>
-            <p>Бонусы за кофе и завтраки в будние дни.</p>
+            <p>Бонусы за кофе и завтраки в будние дни — накапливаются и сгорают при следующем визите.</p>
           </article>
           <article>
-            <span>Birthday</span>
-            <p>Десерт-комплимент в день рождения гостя.</p>
+            <span>Gift</span>
+            <p>Десерт-комплимент в день рождения — от Bon! лично для каждого постоянного гостя.</p>
           </article>
           <article>
             <span>Office</span>
-            <p>Корпоративные заказы для компаний и мероприятий.</p>
+            <p>Корпоративные заказы для компаний и мероприятий — обсудим детали при обращении.</p>
           </article>
         </div>
       </section>
 
+      <!-- ─── Events ─────────────────────────────────────────── -->
       <section id="events" class="events section-warm">
         <div class="split">
           <div>
-            <p class="eyebrow">Pour chaque jour</p>
-            <h2>Больше поводов зайти, чем просто “выпить кофе”.</h2>
+            <span class="eyebrow">Pour chaque jour</span>
+            <h2>Больше поводов зайти, чем просто выпить кофе.</h2>
           </div>
           <div class="event-list">
             <article>
-              <span>08:00-12:00</span>
+              <div class="ev-time">08:00 — 12:00</div>
               <h3>Paris Breakfast</h3>
-              <p>
-                Сеты с круассаном, салатом и большим кофе для утренней посадки и
-                take-away.
-              </p>
+              <p>Сеты с круассаном, салатом и большим кофе — для утренней посадки и take-away.</p>
             </article>
             <article>
-              <span>14:00-18:00</span>
+              <div class="ev-time">14:00 — 18:00</div>
               <h3>La Vitrine</h3>
-              <p>
-                Десерт дня, натуральный шоколад, мороженое и сезонные вкусы в
-                витрине.
-              </p>
+              <p>Десерт дня, натуральный шоколад, мороженое и сезонные вкусы в витрине.</p>
             </article>
             <article>
-              <span>Weekend</span>
+              <div class="ev-time">Выходные</div>
               <h3>Bon! Family</h3>
-              <p>
-                Семейные завтраки, детские позиции и спокойные зоны для долгих
-                встреч.
-              </p>
+              <p>Семейные завтраки, детские позиции и спокойные зоны для долгих встреч.</p>
             </article>
           </div>
         </div>
       </section>
 
+      <!-- ─── Reviews ────────────────────────────────────────── -->
       <section class="reviews section-light">
         <div class="section-head">
-          <p class="eyebrow">Les avis</p>
+          <span class="eyebrow">Les avis</span>
           <h2>Почему гости возвращаются.</h2>
         </div>
         <div class="review-grid">
           <article>
-            <p>
-              “Удобное место для завтрака и встреч. Кофе стабильно хороший, а
-              витрина всегда решает вопрос с десертом.”
-            </p>
-            <strong>Малика, Ташкент</strong>
+            <div class="review-stars">★★★★★</div>
+            <p>«Удобное место для завтрака и встреч. Кофе стабильно хороший, а витрина всегда решает вопрос с десертом.»</p>
+            <span class="reviewer">Малика, Ташкент</span>
           </article>
           <article>
-            <p>
-              “Bon! ощущается как маленькая европейская пауза в городе. Хорошо
-              для семьи и для работы за кофе.”
-            </p>
-            <strong>Азиз, Юнусабад</strong>
+            <div class="review-stars">★★★★★</div>
+            <p>«Bon! ощущается как маленькая европейская пауза в городе. Хорошо для семьи и для работы за кофе.»</p>
+            <span class="reviewer">Азиз, Юнусабад</span>
           </article>
           <article>
-            <p>
-              “Удобно, когда можно быстро выбрать филиал, посмотреть меню и
-              сразу связаться с кофейней.”
-            </p>
-            <strong>Дильноза, Ц-1</strong>
+            <div class="review-stars">★★★★★</div>
+            <p>«Удобно, когда можно быстро выбрать филиал, посмотреть меню и сразу связаться с кофейней.»</p>
+            <span class="reviewer">Дильноза, Ц-1</span>
           </article>
         </div>
       </section>
 
+      <!-- ─── Contacts ───────────────────────────────────────── -->
       <section id="contacts" class="contacts section-dark">
         <div class="contacts-copy">
-          <p class="eyebrow">Contacts</p>
+          <span class="eyebrow">Contacts</span>
           <h2>Контакты для гостей Bon!</h2>
+          <p>Позвоните или напишите — ответим по любому вопросу: заказ, резерв, доставка.</p>
         </div>
-        <div class="contact-board" aria-label="Контактные номера">
+        <div class="contact-board" aria-label="Контакты">
           <a class="contact-line" href="tel:+998901112233">
-            <span>Единый номер</span>
+            <label>Единый номер</label>
             <strong>+998 90 111 22 33</strong>
           </a>
           <a class="contact-line" href="tel:+998901112244">
-            <span>Доставка</span>
+            <label>Доставка</label>
             <strong>+998 90 111 22 44</strong>
           </a>
           <a class="contact-line" href="tel:+998901112255">
-            <span>Филиал на Глинки</span>
+            <label>Глинки, 19</label>
             <strong>+998 90 111 22 55</strong>
           </a>
           <div class="contact-meta">
             <div>
-              <span>График</span>
-              <strong>07:30-23:00</strong>
+              <label>График</label>
+              <strong>07:30 — 23:00</strong>
             </div>
             <div>
-              <span>Instagram</span>
+              <label>Instagram</label>
               <strong>@boncafe_uz</strong>
             </div>
           </div>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
       <div>
-        <strong>Bon!</strong>
-        <span>Boulangerie · Patisserie · Cafe</span>
+        <div class="footer-brand">Bon!</div>
+        <div class="footer-sub">Boulangerie · Patisserie · Café</div>
       </div>
-      <div class="footer-links">
+      <nav class="footer-links">
         <a href="menu.html">Меню</a>
         <a href="#branches">Филиалы</a>
         <a href="#contacts">Контакты</a>
-      </div>
+      </nav>
+      <span class="footer-copy">© 2024 Bon! Café, Ташкент</span>
     </footer>
 
     <script src="script.js"></script>

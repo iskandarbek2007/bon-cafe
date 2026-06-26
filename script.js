@@ -4,7 +4,7 @@ const menuData = {
     ["Сырники Bon!", "Нежные сырники с ягодным соусом и сметаной.", "42 000 сум"],
     ["Croissant Matin", "Круассан, мягкий сыр, салат и американо.", "60 000 сум"],
     ["French Omelette", "Омлет с зеленью, тостом и маленьким салатом.", "48 000 сум"],
-    ["Avocado toast", "Тост с авокадо, яйцом пашот и зелёным салатом.", "58 000 сум"],
+    ["Avocado Toast", "Тост с авокадо, яйцом пашот и зелёным салатом.", "58 000 сум"],
     ["Bon! Granola", "Гранола с йогуртом, ягодами и мёдом.", "39 000 сум"],
   ],
   pastry: [
@@ -41,127 +41,124 @@ const menuData = {
   ],
 };
 
+const categoryLabels = {
+  breakfast: "Завтраки",
+  pastry:    "Выпечка",
+  coffee:    "Кофе",
+  dessert:   "Десерты",
+  dinner:    "Обед и вечер",
+};
+
+/* ── Page Loading ──────────────────────────────────────────── */
 document.body.classList.add("is-loading");
+window.addEventListener("load", () => document.body.classList.remove("is-loading"));
 
-window.addEventListener("load", () => {
-  document.body.classList.remove("is-loading");
-});
+/* ── Full Menu Render ──────────────────────────────────────── */
+const fullMenu = document.querySelector("[data-full-menu]");
+function renderFullMenu() {
+  if (!fullMenu) return;
+  fullMenu.innerHTML = Object.entries(menuData)
+    .map(([category, dishes]) => `
+      <section class="menu-category" id="${category}">
+        <div class="menu-category-head">
+          <span class="cat-label">${categoryLabels[category]}</span>
+          <h3>${categoryLabels[category]}</h3>
+        </div>
+        <div class="menu-stack">
+          ${dishes.map(([title, text, price]) => `
+            <article class="menu-dish menu-dish-row">
+              <strong>${title}</strong>
+              <p>${text}</p>
+              <span class="dish-price">${price}</span>
+            </article>
+          `).join("")}
+        </div>
+      </section>
+    `).join("");
+}
+renderFullMenu();
 
+/* ── Panel Menu (home) ─────────────────────────────────────── */
 const panel = document.querySelector("[data-menu-panel]");
-const tabs = document.querySelectorAll("[data-menu]");
-
+const tabs  = document.querySelectorAll("[data-menu]");
 function renderMenu(category) {
   if (!panel) return;
-
-  panel.innerHTML = menuData[category]
-    .map(
-      ([title, text, price]) => `
-        <article class="menu-dish">
-          <strong>${title}</strong>
-          <span>${price}</span>
-          <p>${text}</p>
-        </article>
-      `
-    )
-    .join("");
+  panel.innerHTML = menuData[category].map(([title, text, price]) => `
+    <article class="menu-dish">
+      <strong>${title}</strong>
+      <span class="dish-price">${price}</span>
+      <p>${text}</p>
+    </article>
+  `).join("");
 }
-
 if (tabs.length) {
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      tabs.forEach((item) => {
-        item.classList.remove("is-active");
-        item.setAttribute("aria-selected", "false");
-      });
-      tab.classList.add("is-active");
-      tab.setAttribute("aria-selected", "true");
-      renderMenu(tab.dataset.menu);
-    });
-  });
-
-  const hashCategory = window.location.hash.replace("#", "");
-  const initialCategory = menuData[hashCategory] ? hashCategory : "breakfast";
-  const initialTab = document.querySelector(`[data-menu="${initialCategory}"]`);
-
-  if (initialTab) {
-    tabs.forEach((item) => {
-      item.classList.remove("is-active");
-      item.setAttribute("aria-selected", "false");
-    });
-    initialTab.classList.add("is-active");
-    initialTab.setAttribute("aria-selected", "true");
-  }
-
-  renderMenu(initialCategory);
+  tabs.forEach(tab => tab.addEventListener("click", () => {
+    tabs.forEach(t => { t.classList.remove("is-active"); t.setAttribute("aria-selected","false"); });
+    tab.classList.add("is-active");
+    tab.setAttribute("aria-selected","true");
+    renderMenu(tab.dataset.menu);
+  }));
+  const hashCat = window.location.hash.replace("#","");
+  const initCat = menuData[hashCat] ? hashCat : "breakfast";
+  const initTab = document.querySelector(`[data-menu="${initCat}"]`);
+  if (initTab) { initTab.classList.add("is-active"); initTab.setAttribute("aria-selected","true"); }
+  renderMenu(initCat);
 }
 
+/* ── Header Scroll Elevation ───────────────────────────────── */
 const header = document.querySelector("[data-elevate]");
-
 function elevateHeader() {
-  header.classList.toggle("is-scrolled", window.scrollY > 30);
+  if (!header) return;
+  header.classList.toggle("is-scrolled", window.scrollY > 40);
 }
-
 window.addEventListener("scroll", elevateHeader, { passive: true });
 elevateHeader();
 
-const chips = document.querySelectorAll("[data-filter]");
+/* ── Branch Filter Chips ───────────────────────────────────── */
+const chips    = document.querySelectorAll("[data-filter]");
 const branches = document.querySelectorAll("[data-type]");
-
 if (chips.length && branches.length) {
-  chips.forEach((chip) => {
-    chip.addEventListener("click", () => {
-      chips.forEach((item) => item.classList.remove("is-active"));
-      chip.classList.add("is-active");
-
-      const filter = chip.dataset.filter;
-      branches.forEach((branch) => {
-        const visible = filter === "all" || branch.dataset.type.includes(filter);
-        branch.classList.toggle("is-hidden", !visible);
-      });
-    });
-  });
+  chips.forEach(chip => chip.addEventListener("click", () => {
+    chips.forEach(c => c.classList.remove("is-active"));
+    chip.classList.add("is-active");
+    const f = chip.dataset.filter;
+    branches.forEach(b => b.classList.toggle("is-hidden", f !== "all" && !b.dataset.type.includes(f)));
+  }));
 }
 
-const animatedItems = document.querySelectorAll(
-  [
-    "section:not(.hero)",
-    ".quick-actions a",
-    ".metrics div",
-    ".season-grid article",
-    ".menu-preview-card",
-    ".mood-item",
-    ".timeline div",
-    ".delivery-card",
-    ".branch",
-    ".loyalty-list article",
-    ".event-list article",
-    ".review-grid article",
-    ".popular-grid article",
-    ".signature-grid article",
-    ".order-steps article",
-    ".menu-dish",
-  ].join(", ")
-);
+/* ── Scroll Reveal ─────────────────────────────────────────── */
+const animatedItems = document.querySelectorAll([
+  "section:not(.hero):not(.menu-hero)",
+  ".quick-actions a",
+  ".metrics div",
+  ".season-grid article",
+  ".menu-preview-card",
+  ".mood-item",
+  ".timeline div",
+  ".delivery-card",
+  ".branch",
+  ".loyalty-list article",
+  ".event-list article",
+  ".review-grid article",
+  ".popular-grid article",
+  ".signature-grid article",
+  ".order-steps article",
+  ".menu-category",
+  ".menu-dish",
+].join(", "));
 
-animatedItems.forEach((item, index) => {
+animatedItems.forEach((item, i) => {
   item.dataset.animate = "";
-  item.style.setProperty("--reveal-delay", `${Math.min(index % 6, 5) * 70}ms`);
+  item.style.setProperty("--reveal-delay", `${Math.min(i % 6, 5) * 70}ms`);
 });
 
 if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.14, rootMargin: "0px 0px -60px 0px" }
-  );
-
-  animatedItems.forEach((item) => revealObserver.observe(item));
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+  animatedItems.forEach(item => obs.observe(item));
 } else {
-  animatedItems.forEach((item) => item.classList.add("is-visible"));
+  animatedItems.forEach(item => item.classList.add("is-visible"));
 }
